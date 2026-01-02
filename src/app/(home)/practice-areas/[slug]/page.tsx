@@ -5,10 +5,30 @@ import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import { Metadata } from 'next'
+
 export function generateStaticParams() {
   return practiceAreas.map((area) => ({
     slug: area.slug,
   }))
+}
+
+export async function generateMetadata(
+  props: PageProps<'/practice-areas/[slug]'>
+): Promise<Metadata> {
+  const params = await props.params
+  const area = practiceAreas.find((p) => p.slug === params.slug)
+
+  if (!area) {
+    return {
+      title: 'Practice Area Not Found',
+    }
+  }
+
+  return {
+    title: area.title,
+    description: area.shortDescription,
+  }
 }
 
 export default async function PracticeAreaPage(
@@ -67,7 +87,8 @@ export default async function PracticeAreaPage(
 
               <div className="border-primary/30 mt-12 border-l-2 pl-8">
                 <p className="text-foreground text-xl font-medium italic">
-                  &quot;We don&apos;t simply advise; we intervene to change outcomes.&quot;
+                  &quot;We don&apos;t simply advise; we intervene to change
+                  outcomes.&quot;
                 </p>
               </div>
             </div>

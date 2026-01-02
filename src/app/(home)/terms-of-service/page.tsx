@@ -1,3 +1,10 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'Terms and Conditions for using the Grench Legal website.',
+}
+
 export default function TermsOfServicePage() {
   return (
     <div className="bg-background min-h-screen py-32">

@@ -1,3 +1,11 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description:
+    'Grench Legal Privacy Policy. Learn how we protect your data and client confidentiality.',
+}
+
 export default function PrivacyPolicyPage() {
   return (
     <div className="bg-background min-h-screen py-32">

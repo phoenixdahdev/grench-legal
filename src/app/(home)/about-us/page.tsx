@@ -5,6 +5,14 @@ import { Team } from '~/components/sections/about/team'
 import { Awards } from '~/components/sections/about/awards'
 import { Community } from '~/components/sections/about/community'
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description:
+    'From a singular vision to global influence. Learn about the history, values, and team behind Grench Legal.',
+}
+
 export default function AboutPage() {
   return (
     <div className="bg-background min-h-screen">
