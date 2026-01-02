@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  images: {
+    qualities: [100, 75, 50, 25],
+  },
+  cacheComponents: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  experimental: {
+    typedEnv: true,
+  },
+}
 
-export default nextConfig;
+export default nextConfig
