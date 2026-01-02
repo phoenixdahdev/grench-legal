@@ -31,7 +31,7 @@ export function Navbar() {
           <div className="hidden items-center gap-8 md:flex">
             {[
               { label: 'Practice Areas', href: '/#practice-areas' },
-              { label: 'Property Management', href: '/#property-management' },
+              { label: 'Property Management', href: '/property-management' },
               { label: 'About Us', href: '/about-us' },
             ].map((item) => (
               <Link
@@ -48,7 +48,7 @@ export function Navbar() {
           {/* CTA / Mobile Toggle */}
           <div className="flex items-center gap-4">
             <Link
-              href="#contact"
+              href="/contact"
               className="hover:bg-primary bg-foreground text-background hidden rounded-full px-6 py-2 text-sm font-semibold transition-all hover:scale-105 md:inline-flex"
             >
               Book Consultation
@@ -83,9 +83,9 @@ export function Navbar() {
             <nav className="flex flex-col gap-8 text-center">
               {[
                 { label: 'Practice Areas', href: '/#practice-areas' },
-                { label: 'Property Management', href: '/#property-management' },
+                { label: 'Property Management', href: '/property-management' },
                 { label: 'About Us', href: '/about-us' },
-                { label: 'Contact', href: '/#contact' },
+                { label: 'Contact', href: '/contact' },
               ].map((item, i) => (
                 <motion.div
                   key={item.label}

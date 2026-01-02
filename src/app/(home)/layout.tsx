@@ -1,5 +1,6 @@
 import { Footer } from '~/components/layout/footer'
 import { Navbar } from '~/components/layout/navbar'
+import { CookieBanner } from '~/components/miscellaneous/cookie-banner'
 
 export default function HomeLayout({
   children,
@@ -11,6 +12,7 @@ export default function HomeLayout({
       <Navbar />
       <div className="flex-1">{children}</div>
       <Footer />
+      <CookieBanner />
     </main>
   )
 }
