@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       'Global corporate counsel and high-stakes litigation. Transforming legal challenges into strategic victories.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Grench Legal',
