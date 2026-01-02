@@ -3,6 +3,7 @@ import { cn } from '~/lib/utils'
 import type { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
 import Provider from '~/components/miscellaneous/provider'
+import GotoTop from '~/components/miscellaneous/go-to-top'
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -20,10 +21,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={cn('antialiased', jetbrainsMono.variable)}>
         <Provider>
-          <main className="font-mono">{children}</main>
+          {children}
+          <GotoTop />
         </Provider>
       </body>
     </html>

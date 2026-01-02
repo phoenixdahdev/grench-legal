@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 
 export function AboutIntro() {
   return (
-    <section id="about-us" className="relative bg-zinc-950 py-32">
+    <section id="about-us" className="bg-background relative py-32">
       <div className="container mx-auto px-6">
         <div className="grid items-start gap-16 md:grid-cols-2">
           <motion.div
@@ -12,9 +12,11 @@ export function AboutIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-serif text-4xl leading-[1.1] text-white md:text-5xl lg:text-6xl">
+            <h2 className="text-foreground font-serif text-4xl leading-[1.1] md:text-5xl lg:text-6xl">
               A heritage of <br />
-              <span className="text-zinc-500 italic">unwavering</span>{' '}
+              <span className="text-muted-foreground italic">
+                unwavering
+              </span>{' '}
               <span className="text-primary">advocacy.</span>
             </h2>
           </motion.div>
@@ -25,9 +27,9 @@ export function AboutIntro() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-xl leading-relaxed text-zinc-400"
+              className="text-muted-foreground text-xl leading-relaxed"
             >
-              At Grench Legal, we don't just practice law; we architect
+              At Grench Legal, we don&apos;t just practice law; we architect
               solutions. Our firm was founded on the principle that true legal
               excellence requires a balance of aggressive representation and
               strategic foresight.
@@ -38,25 +40,29 @@ export function AboutIntro() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="flex gap-12 border-t border-zinc-900 pt-8"
+              className="border-border flex gap-12 border-t pt-8"
             >
               <div>
-                <div className="mb-2 font-serif text-3xl text-white">25+</div>
-                <div className="text-sm tracking-wider text-zinc-500 uppercase">
+                <div className="text-foreground mb-2 font-serif text-3xl">
+                  25+
+                </div>
+                <div className="text-muted-foreground text-sm tracking-wider uppercase">
                   Years Exp.
                 </div>
               </div>
               <div>
-                <div className="mb-2 font-serif text-3xl text-white">500+</div>
-                <div className="text-sm tracking-wider text-zinc-500 uppercase">
+                <div className="text-foreground mb-2 font-serif text-3xl">
+                  500+
+                </div>
+                <div className="text-muted-foreground text-sm tracking-wider uppercase">
                   Cases Won
                 </div>
               </div>
               <div>
-                <div className="mb-2 font-serif text-3xl text-white">
+                <div className="text-foreground mb-2 font-serif text-3xl">
                   $100M+
                 </div>
-                <div className="text-sm tracking-wider text-zinc-500 uppercase">
+                <div className="text-muted-foreground text-sm tracking-wider uppercase">
                   Recovered
                 </div>
               </div>

@@ -16,12 +16,12 @@ export function Navbar() {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="fixed top-6 left-1/2 z-50 w-[95%] max-w-5xl -translate-x-1/2"
       >
-        <div className="flex items-center justify-between rounded-full border border-white/10 bg-black/40 px-6 py-4 shadow-2xl backdrop-blur-xl">
+        <div className="border-border bg-background/80 flex items-center justify-between rounded-full border px-6 py-4 shadow-2xl backdrop-blur-xl">
           {/* Logo */}
           <Link href="/" className="group relative z-50">
-            <span className="group-hover:text-primary font-serif text-xl font-bold tracking-tight text-white transition-colors">
+            <span className="group-hover:text-primary text-foreground font-serif text-xl font-bold tracking-tight transition-colors">
               Grench
-              <span className="text-primary transition-colors group-hover:text-white">
+              <span className="text-primary group-hover:text-foreground transition-colors">
                 .
               </span>
             </span>
@@ -34,7 +34,7 @@ export function Navbar() {
                 <Link
                   key={item}
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  className="group relative text-sm font-medium text-zinc-300 transition-colors hover:text-white"
+                  className="group text-muted-foreground hover:text-foreground relative text-sm font-medium transition-colors"
                 >
                   {item}
                   <span className="bg-primary absolute -bottom-1 left-0 h-[1px] w-0 transition-all group-hover:w-full" />
@@ -47,13 +47,13 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="#contact"
-              className="hover:bg-primary hidden rounded-full bg-white px-6 py-2 text-sm font-semibold text-black transition-all hover:scale-105 md:inline-flex"
+              className="hover:bg-primary bg-foreground text-background hidden rounded-full px-6 py-2 text-sm font-semibold transition-all hover:scale-105 md:inline-flex"
             >
               Book Consultation
             </Link>
 
             <button
-              className="hover:text-primary text-white transition-colors md:hidden"
+              className="hover:text-primary text-foreground transition-colors md:hidden"
               onClick={() => setIsOpen(true)}
             >
               <Menu className="h-6 w-6" />
@@ -69,7 +69,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] flex flex-col items-center justify-center bg-black/95 backdrop-blur-xl"
+            className="bg-background/95 fixed inset-0 z-[60] flex flex-col items-center justify-center backdrop-blur-xl"
           >
             <button
               onClick={() => setIsOpen(false)}
@@ -94,7 +94,7 @@ export function Navbar() {
                   <Link
                     href={`#${item.toLowerCase().replace(' ', '-')}`}
                     onClick={() => setIsOpen(false)}
-                    className="hover:text-primary font-serif text-4xl font-thin text-white transition-colors"
+                    className="hover:text-primary text-foreground font-serif text-4xl font-thin transition-colors"
                   >
                     {item}
                   </Link>
