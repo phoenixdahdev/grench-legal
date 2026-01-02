@@ -6,6 +6,7 @@ export interface PracticeArea {
   fullDescription: string
   image: string
   services: string[]
+  quote?: string
   faqs?: { question: string; answer: string }[]
   stats?: { value: string; label: string }[]
 }
@@ -17,15 +18,17 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Corporate & Commercial',
     shortDescription: 'Mergers, acquisitions, and strategic formation.',
     fullDescription:
-      'Business is war by other means. We provide the strategic armor and weaponry your company needs to conquer new markets and defend its territory. From complex cross-border mergers to ironclad operating agreements, our corporate team ensures your foundation is unshakeable.',
+      'Business success requires strategy, compliance, and a solid foundation. At Grench Legal, we provide the guidance and legal framework your company needs to grow, operate efficiently, and navigate regulatory landscapes. From business formation to securing government licenses and ensuring ongoing regulatory compliance, our corporate and commercial team builds unshakable foundations for your enterprise.',
     image:
       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop',
+    quote:
+      "We don't just advise; we enable businesses to thrive and achieve results.",
     services: [
-      'Mergers & Acquisitions',
-      'Corporate Formation & Governance',
-      'Contract Negotiation & Drafting',
-      'Shareholder Dispute Resolution',
-      'Regulatory Compliance',
+      'Corporate Formation & Governance – Establishing businesses, drafting constitutions, and maintaining compliant corporate structures.',
+      'Contract Drafting & Negotiation – Preparing and reviewing agreements to protect commercial interests.',
+      'Shareholder & Corporate Dispute Resolution – Resolving conflicts to safeguard business continuity.',
+      'Regulatory Compliance & Licensing – Assisting with government permits, approvals, and ongoing regulatory adherence.',
+      'Business Advisory & Commercial Strategy – Providing practical legal solutions to support growth and market entry.',
     ],
     stats: [
       { value: '$4.5B+', label: 'Transaction Value' },

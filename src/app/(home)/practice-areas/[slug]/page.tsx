@@ -87,8 +87,8 @@ export default async function PracticeAreaPage(
 
               <div className="border-primary/30 mt-12 border-l-2 pl-8">
                 <p className="text-foreground text-xl font-medium italic">
-                  &quot;We don&apos;t simply advise; we intervene to change
-                  outcomes.&quot;
+                  {area.quote ??
+                    "We don't simply advise; we intervene to change outcomes."}
                 </p>
               </div>
             </div>
