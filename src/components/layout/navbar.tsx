@@ -5,8 +5,12 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'motion/react'
 import { Menu, X } from 'lucide-react'
 
+import { usePathname } from 'next/navigation'
+import { cn } from '~/lib/utils'
+
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
+  const pathname = usePathname()
 
   return (
     <>
@@ -33,16 +37,44 @@ export function Navbar() {
               { label: 'Practice Areas', href: '/#practice-areas' },
               { label: 'Property Management', href: '/property-management' },
               { label: 'About Us', href: '/about-us' },
-            ].map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="group text-muted-foreground hover:text-foreground relative text-sm font-medium transition-colors"
-              >
-                {item.label}
-                <span className="bg-primary absolute -bottom-1 left-0 h-[1px] w-0 transition-all group-hover:w-full" />
-              </Link>
-            ))}
+            ].map((item) => {
+              const isActive =
+                item.href === '/'
+                  ? pathname === '/'
+                  : pathname.startsWith(item.href) && item.href !== '/'
+              // Special case for hash links, we only match if explicit
+              const isHash = item.href.includes('#')
+              const isLinkActive = isHash ? false : isActive // Simple check for now, hash links don't usually map to pathname directly unless handled specifically.
+              // Actually, for /property-management, it's a real route.
+              // For /#practice-areas, it's the home page.
+              // Let's refine: matched if pathname starts with href (ignoring hash)
+              const pathPart = item.href.split('#')[0]
+              const isMatch =
+                pathPart === '/' && item.href !== '/'
+                  ? false // Don't match root for hash links unless exact? Actually /#... is root.
+                  : pathPart !== '' && pathname === pathPart
+
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={cn(
+                    'group relative text-sm font-medium transition-colors',
+                    isMatch
+                      ? 'text-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  )}
+                >
+                  {item.label}
+                  <span
+                    className={cn(
+                      'bg-primary absolute -bottom-1 left-0 h-[1px] transition-all group-hover:w-full',
+                      isMatch ? 'w-full' : 'w-0'
+                    )}
+                  />
+                </Link>
+              )
+            })}
           </div>
 
           {/* CTA / Mobile Toggle */}

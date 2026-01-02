@@ -60,7 +60,7 @@ export function LegalAdvantage() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-muted relative h-[600px] overflow-hidden"
+            className="bg-muted relative h-150 overflow-hidden"
           >
             <div className="absolute inset-0 bg-linear-to-tr from-zinc-900 to-zinc-800" />
             <div

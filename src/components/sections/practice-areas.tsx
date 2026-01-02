@@ -2,39 +2,8 @@
 
 import { motion } from 'motion/react'
 import { ArrowUpRight } from 'lucide-react'
-
-const practices = [
-  {
-    id: '01',
-    title: 'Corporate & Commercial',
-    description: 'Mergers, acquisitions, and strategic formation.',
-  },
-  {
-    id: '02',
-    title: 'Employment Matters',
-    description: 'Workplace disputes, contracts, and compliance.',
-  },
-  {
-    id: '03',
-    title: 'Intellectual Property',
-    description: 'Copyrights, trademarks, and asset protection.',
-  },
-  {
-    id: '04',
-    title: 'Probate & Estate',
-    description: 'Wills, trusts, and compassionate administration.',
-  },
-  {
-    id: '05',
-    title: 'Real Estate',
-    description: 'Transactions, zoning, and property law.',
-  },
-  {
-    id: '06',
-    title: 'Entertainment Law',
-    description: 'Representation for talent and production companies.',
-  },
-]
+import { practiceAreas } from '~/lib/data/practice-areas'
+import Link from 'next/link'
 
 export function PracticeAreas() {
   return (
@@ -59,32 +28,37 @@ export function PracticeAreas() {
         </div>
 
         <div className="border-border border-t">
-          {practices.map((practice, index) => (
-            <motion.div
+          {practiceAreas.map((practice, index) => (
+            <Link
               key={practice.title}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group border-border hover:border-foreground/20 relative border-b transition-colors duration-500"
+              href={`/practice-areas/${practice.slug}`}
+              className="block"
             >
-              <div className="relative z-10 flex flex-col gap-8 py-12 transition-transform duration-500 group-hover:translate-x-4 md:flex-row md:items-baseline">
-                <span className="text-muted-foreground/60 font-mono text-sm">
-                  /{practice.id}
-                </span>
-                <h3 className="group-hover:text-primary text-muted-foreground font-serif text-3xl transition-colors md:text-4xl">
-                  {practice.title}
-                </h3>
-                <p className="text-muted-foreground group-hover:text-foreground transition-colors md:ml-auto md:max-w-xs">
-                  {practice.description}
-                </p>
-                <div className="justify-self-end opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:ml-12">
-                  <ArrowUpRight className="text-primary h-6 w-6" />
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group border-border hover:border-foreground/20 relative border-b transition-colors duration-500"
+              >
+                <div className="relative z-10 flex flex-col gap-8 py-12 transition-transform duration-500 group-hover:translate-x-4 md:flex-row md:items-baseline">
+                  <span className="text-muted-foreground/60 font-mono text-sm">
+                    /{practice.id}
+                  </span>
+                  <h3 className="group-hover:text-primary text-muted-foreground font-serif text-3xl transition-colors md:text-4xl">
+                    {practice.title}
+                  </h3>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors md:ml-auto md:max-w-xs">
+                    {practice.shortDescription}
+                  </p>
+                  <div className="justify-self-end opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:ml-12">
+                    <ArrowUpRight className="text-primary h-6 w-6" />
+                  </div>
                 </div>
-              </div>
 
-              <div className="group-hover:bg-muted/50 absolute inset-0 z-0 bg-transparent transition-colors duration-500" />
-            </motion.div>
+                <div className="group-hover:bg-muted/50 absolute inset-0 z-0 bg-transparent transition-colors duration-500" />
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>

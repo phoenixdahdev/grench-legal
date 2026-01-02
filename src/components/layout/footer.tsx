@@ -62,21 +62,46 @@ export function Footer() {
               Sitemap
             </h3>
             <ul className="space-y-4">
-              {[
-                'Home',
-                'Practice Areas',
-                'Property Management',
-                'About Us',
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={`#${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#practice-areas"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Practice Areas
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/property-management"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Property Management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about-us"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -85,21 +110,38 @@ export function Footer() {
               Legal
             </h3>
             <ul className="space-y-4">
-              {[
-                'Privacy Policy',
-                'Terms of Service',
-                'Cookie Policy',
-                'Disclaimer',
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms-of-service"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Cookie Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Disclaimer
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
