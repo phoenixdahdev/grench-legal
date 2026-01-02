@@ -29,18 +29,20 @@ export function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden items-center gap-8 md:flex">
-            {['Practice Areas', 'Property Management', 'About Us'].map(
-              (item) => (
-                <Link
-                  key={item}
-                  href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  className="group text-muted-foreground hover:text-foreground relative text-sm font-medium transition-colors"
-                >
-                  {item}
-                  <span className="bg-primary absolute -bottom-1 left-0 h-[1px] w-0 transition-all group-hover:w-full" />
-                </Link>
-              )
-            )}
+            {[
+              { label: 'Practice Areas', href: '/#practice-areas' },
+              { label: 'Property Management', href: '/#property-management' },
+              { label: 'About Us', href: '/about-us' },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="group text-muted-foreground hover:text-foreground relative text-sm font-medium transition-colors"
+              >
+                {item.label}
+                <span className="bg-primary absolute -bottom-1 left-0 h-[1px] w-0 transition-all group-hover:w-full" />
+              </Link>
+            ))}
           </div>
 
           {/* CTA / Mobile Toggle */}
@@ -80,23 +82,23 @@ export function Navbar() {
 
             <nav className="flex flex-col gap-8 text-center">
               {[
-                'Practice Areas',
-                'Property Management',
-                'About Us',
-                'Contact',
+                { label: 'Practice Areas', href: '/#practice-areas' },
+                { label: 'Property Management', href: '/#property-management' },
+                { label: 'About Us', href: '/about-us' },
+                { label: 'Contact', href: '/#contact' },
               ].map((item, i) => (
                 <motion.div
-                  key={item}
+                  key={item.label}
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.1 + i * 0.1 }}
                 >
                   <Link
-                    href={`#${item.toLowerCase().replace(' ', '-')}`}
+                    href={item.href}
                     onClick={() => setIsOpen(false)}
                     className="hover:text-primary text-foreground font-serif text-4xl font-thin transition-colors"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </motion.div>
               ))}
