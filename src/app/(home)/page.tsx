@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    // Updated container to use theme variables
     <div className="selection:bg-primary bg-background text-foreground min-h-screen selection:text-black">
       <Hero />
       <AboutIntro />

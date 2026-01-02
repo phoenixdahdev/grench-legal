@@ -13,11 +13,9 @@ export function AboutIntro() {
             viewport={{ once: true }}
           >
             <h2 className="text-foreground font-serif text-4xl leading-[1.1] md:text-5xl lg:text-6xl">
-              A heritage of <br />
-              <span className="text-muted-foreground italic">
-                unwavering
-              </span>{' '}
-              <span className="text-primary">advocacy.</span>
+              A legacy of <br />
+              <span className="text-muted-foreground italic">trusted</span>{' '}
+              <span className="text-primary">legal solutions.</span>
             </h2>
           </motion.div>
 
@@ -29,10 +27,12 @@ export function AboutIntro() {
               transition={{ delay: 0.2 }}
               className="text-muted-foreground text-xl leading-relaxed"
             >
-              At Grench Legal, we don&apos;t just practice law; we architect
-              solutions. Our firm was founded on the principle that true legal
-              excellence requires a balance of aggressive representation and
-              strategic foresight.
+              At Grench Legal, we don&apos;t just practice law; we craft
+              strategies that protect and grow your interests. With deep
+              expertise in corporate and commercial law, probate, matrimonial
+              matters, and property management, our firm combines strategic
+              foresight with practical solutions to safeguard what matters most
+              to you.
             </motion.p>
 
             <motion.div

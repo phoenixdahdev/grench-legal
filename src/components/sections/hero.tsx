@@ -19,7 +19,7 @@ export function Hero() {
           >
             <div className="bg-primary h-px w-12" />
             <span className="text-primary text-sm font-medium tracking-widest uppercase">
-              Established Excellence
+              Smart delivery.
             </span>
           </motion.div>
 
@@ -29,7 +29,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-foreground font-serif text-5xl leading-[0.95] font-medium md:text-7xl xl:text-8xl"
           >
-            Defending Rights.
+            Legal certainty.
             <br />
             <span className="text-muted-foreground italic">Securing</span>{' '}
             <span className="text-primary">Legacies.</span>
@@ -41,9 +41,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="border-border text-muted-foreground my-4 max-w-xl border-l-2 pl-6 text-xl leading-relaxed"
           >
-            A premier law firm and property management consultancy dedicated to
-            navigating the complexities of your world with precision and
-            discretion.
+            A dedicated law firm offering legal and corporate secretarial
+            services, with strong expertise in legal practice and chartered
+            secretarial and administrative support.
           </motion.p>
 
           <motion.div
