@@ -34,24 +34,16 @@ export function Navbar() {
           {/* Desktop Links */}
           <div className="hidden items-center gap-8 md:flex">
             {[
-              { label: 'Practice Areas', href: '/#practice-areas' },
-              { label: 'Property Management', href: '/property-management' },
               { label: 'About Us', href: '/about-us' },
+              { label: 'Our Team', href: '/team' },
+              { label: 'Practice Areas', href: '/#practice-areas' },
+              { label: 'Publications', href: '/blog' },
+              { label: 'Contact Us', href: '/contact', hideOnLarge: true },
             ].map((item) => {
-              const isActive =
-                item.href === '/'
-                  ? pathname === '/'
-                  : pathname.startsWith(item.href) && item.href !== '/'
-              // Special case for hash links, we only match if explicit
-              const isHash = item.href.includes('#')
-              const isLinkActive = isHash ? false : isActive // Simple check for now, hash links don't usually map to pathname directly unless handled specifically.
-              // Actually, for /property-management, it's a real route.
-              // For /#practice-areas, it's the home page.
-              // Let's refine: matched if pathname starts with href (ignoring hash)
               const pathPart = item.href.split('#')[0]
               const isMatch =
                 pathPart === '/' && item.href !== '/'
-                  ? false // Don't match root for hash links unless exact? Actually /#... is root.
+                  ? false
                   : pathPart !== '' && pathname === pathPart
 
               return (
@@ -60,6 +52,7 @@ export function Navbar() {
                   href={item.href}
                   className={cn(
                     'group relative text-sm font-medium transition-colors',
+                    item.hideOnLarge && 'lg:hidden',
                     isMatch
                       ? 'text-foreground'
                       : 'text-muted-foreground hover:text-foreground'
@@ -68,7 +61,7 @@ export function Navbar() {
                   {item.label}
                   <span
                     className={cn(
-                      'bg-primary absolute -bottom-1 left-0 h-[1px] transition-all group-hover:w-full',
+                      'bg-primary absolute -bottom-1 left-0 h-px transition-all group-hover:w-full',
                       isMatch ? 'w-full' : 'w-0'
                     )}
                   />
@@ -77,7 +70,6 @@ export function Navbar() {
             })}
           </div>
 
-          {/* CTA / Mobile Toggle */}
           <div className="flex items-center gap-4">
             <Link
               href="/contact"
@@ -96,14 +88,13 @@ export function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Full Screen Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="bg-background/95 fixed inset-0 z-[60] flex flex-col items-center justify-center backdrop-blur-xl"
+            className="bg-background/95 fixed inset-0 z-60 flex flex-col items-center justify-center backdrop-blur-xl"
           >
             <button
               onClick={() => setIsOpen(false)}
@@ -114,10 +105,11 @@ export function Navbar() {
 
             <nav className="flex flex-col gap-8 text-center">
               {[
-                { label: 'Practice Areas', href: '/#practice-areas' },
-                { label: 'Property Management', href: '/property-management' },
                 { label: 'About Us', href: '/about-us' },
-                { label: 'Contact', href: '/contact' },
+                { label: 'Our Team', href: '/team' },
+                { label: 'Practice Areas', href: '/#practice-areas' },
+                { label: 'Publications/Blog', href: '/blog' },
+                { label: 'Contact Us', href: '/contact' },
               ].map((item, i) => (
                 <motion.div
                   key={item.label}

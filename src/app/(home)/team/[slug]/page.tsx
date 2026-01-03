@@ -1,8 +1,6 @@
 import { teamMembers } from '~/lib/data/team'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
 import { Metadata } from 'next'
 import GoBackButton from './go-back'
 
