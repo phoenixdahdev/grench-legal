@@ -7,17 +7,20 @@ const info = [
   {
     icon: MapPin,
     title: 'Headquarters',
-    details: ['100 Wall Street, Suite 500', 'New York, NY 10005'],
+    details: [
+      '19 Razaq Balogun Street, Off Adeniran Ogunsanya Road',
+      'Surulere, Lagos State',
+    ],
   },
   {
     icon: Phone,
     title: 'Phone',
-    details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+    details: ['0906 758 4159', '09135462547'],
   },
   {
     icon: Mail,
     title: 'Email',
-    details: ['contact@grenchlegal.com', 'media@grenchlegal.com'],
+    details: ['support@grenchlegal.com'],
   },
   {
     icon: Clock,

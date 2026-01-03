@@ -20,16 +20,16 @@ export function Footer() {
 
             <div className="space-y-2">
               <a
-                href="mailto:contact@grenchlegal.com"
+                href="mailto:support@grenchlegal.com"
                 className="hover:text-primary text-muted-foreground block text-xl transition-colors"
               >
-                contact@grenchlegal.com
+                support@grenchlegal.com
               </a>
               <a
-                href="tel:+15551234567"
+                href="tel:+2349067584159"
                 className="hover:text-primary text-muted-foreground block text-xl transition-colors"
               >
-                +1 (555) 123-4567
+                0906 758 4159
               </a>
             </div>
 

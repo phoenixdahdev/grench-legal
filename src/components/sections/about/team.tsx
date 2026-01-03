@@ -1,36 +1,26 @@
 'use client'
 
-import { motion } from 'motion/react'
 import Image from 'next/image'
+import { motion } from 'motion/react'
 
 const team = [
   {
     name: 'Alexander Grench',
-    role: 'Managing Partner',
+    role: 'Principal Associate',
     specialty: 'Corporate Litigation',
-    image:
-      'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop',
+    image: '/ceo.jpeg',
   },
   {
-    name: 'Victoria Sterling',
+    name: 'Clement Akoka',
     role: 'Senior Partner',
     specialty: 'Intellectual Property',
-    image:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop',
+    image: '/team2.jpeg',
   },
   {
-    name: 'Marcus Vance',
-    role: 'Head of Real Estate',
+    name: 'Adeyemo temiloluwa Elizabeth',
+    role: 'Clerk',
     specialty: 'Commercial Property',
-    image:
-      'https://images.unsplash.com/photo-1556157382-97eda2d622ca?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    name: 'Elena Rodriguez',
-    role: 'Partner',
-    specialty: 'Family Law',
-    image:
-      'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop',
+    image: '/team3.jpeg',
   },
 ]
 
@@ -47,7 +37,7 @@ export function Team() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {team.map((member, index) => (
             <motion.div
               key={member.name}
@@ -57,7 +47,7 @@ export function Team() {
               transition={{ delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="bg-muted relative mb-6 aspect-[3/4] overflow-hidden">
+              <div className="bg-muted relative mb-6 aspect-3/4 overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
