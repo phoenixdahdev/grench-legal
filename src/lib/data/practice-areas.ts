@@ -54,15 +54,14 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Employment Matters',
     shortDescription: 'Workplace disputes, contracts, and compliance.',
     fullDescription:
-      'The workforce is your greatest asset and your biggest liability. We help employers navigate the minefield of labor laws, protecting you from frivolous claims while ensuring your policies promote a culture of excellence and accountability.',
+      'We advise employers on labour law compliance, workplace policies, and dispute management, while safeguarding employees against wrongful and unfair dismissal in line with international best practices.',
     image:
       'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2000&auto=format&fit=crop',
     services: [
-      'Executive Compensation Packages',
-      'Non-Compete & NDA Enforcement',
-      'Workplace Discrimination Defense',
-      'Employee Handbook Creation',
-      'Termination & Severance Strategy',
+      'Drafting and review of employee handbooks and workplace policies',
+      'Non-compete, confidentiality, and NDA drafting and enforcement',
+      'Defence and prosecution of claims arising from unlawful or wrongful termination',
+      'Termination management and severance structuring',
     ],
     stats: [
       { value: '98%', label: 'Settlement Rate' },
@@ -82,15 +81,16 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Intellectual Property',
     shortDescription: 'Copyrights, trademarks, and asset protection.',
     fullDescription:
-      "Your ideas are the currency of the future. We don't just register them; we defend them with ferocity. Whether it's a patent infringement suit or a global trademark strategy, we ensure your intellectual capital remains exclusively yours.",
+      "Innovation is a valuable business asset. At Grench Legal, we go beyond registration to provide strategic protection and enforcement of intellectual property rights. From patents, trademarks, and copyrights to infringement actions and risk-management strategies, we ensure your ideas remain protected, commercialised, and exclusively yours.",
     image:
       'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2000&auto=format&fit=crop',
     services: [
-      'Trademark Registration & Litigation',
-      'Copyright Protection',
-      'Trade Secret Audits',
-      'Licensing Agreements',
-      'IP Portfolio Management',
+      'Trademark searches, registration, and brand protection',
+      'Copyright protection and registration',
+      'Industrial design protection and filings',
+      'Intellectual property enforcement and litigation',
+      'Drafting and negotiation of IP licensing and assignment agreements',
+      'Intellectual property portfolio management and advisory',
     ],
     stats: [
       { value: '5000+', label: 'Trademarks Secured' },
@@ -110,15 +110,16 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Probate & Estate',
     shortDescription: 'Wills, trusts, and compassionate administration.',
     fullDescription:
-      'Legacy is what remains. We meticulously craft estate plans that preserve your wealth for generations, minimizing tax burdens and family disputes. When the time comes, our probate team executes your wishes with precision and dignity.',
+      'At Grench Legal, we provide thoughtful and structured estate planning aimed at preserving wealth, ensuring orderly succession, and minimising disputes. From drafting wills and estate plans to probate and estate administration, we manage each process with precision, discretion, and respect for your legacy.',
     image:
       'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2000&auto=format&fit=crop',
     services: [
-      'Comprehensive Estate Planning',
-      'Trust Administration',
-      'Probate Litigation',
-      'Asset Protection Trusts',
-      'Elder Law & Guardianships',
+      'Comprehensive estate planning and succession structuring',
+      'Drafting, review, and safekeeping of wills',
+      'Processing of Grants and Letters of Administration',
+      'Probate and estate administration',
+      'Probate and inheritance litigation',
+      'Asset protection and family trust advisory',
     ],
     stats: [
       { value: '$2B+', label: 'Assets Protected' },
