@@ -5,7 +5,7 @@ import { motion } from 'motion/react'
 
 const team = [
   {
-    name: 'Alexander Grench',
+    name: 'Mirian',
     role: 'Principal Associate',
     specialty: 'Corporate Litigation',
     image: '/ceo.jpeg',

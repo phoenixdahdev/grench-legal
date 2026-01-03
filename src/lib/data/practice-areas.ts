@@ -16,7 +16,7 @@ export const practiceAreas: PracticeArea[] = [
     id: '01',
     slug: 'corporate-commercial',
     title: 'Corporate & Commercial',
-    shortDescription: 'Mergers, acquisitions, and strategic formation.',
+    shortDescription: 'Business set-up, regulatory compliance & commercial agreements.',
     fullDescription:
       'Business success requires strategy, compliance, and a solid foundation. At Grench Legal, we provide the guidance and legal framework your company needs to grow, operate efficiently, and navigate regulatory landscapes. From business formation to securing government licenses and ensuring ongoing regulatory compliance, our corporate and commercial team builds unshakable foundations for your enterprise.',
     image:
@@ -132,15 +132,15 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Real Estate',
     shortDescription: 'Transactions, zoning, and property law.',
     fullDescription:
-      'Real estate is not just land; it is power. We represent developers, investors, and owners in high-stakes transactions and litigation. From zoning battles to complex commercial leases, we clear the path for your vision.',
+      'We advise and represent developers, investors, and property owners on real estate transactions, property management, and disputes. Our work spans acquisitions, leasing, processing and perfection of title documents, and court representation in landlord-tenant matters, including recovery of possession.',
     image:
       'https://images.unsplash.com/photo-1460317442991-0ec2aa24e565?q=80&w=2000&auto=format&fit=crop',
     services: [
-      'Commercial Lease Negotiation',
-      'Development & Zoning',
-      'Landlord-Tenant Litigation',
-      'Title Dispute Resolution',
-      'Closing Services',
+      'Property Acquisition & Management',
+      'Commercial Leasing',
+      'Title Documentation & Perfection',
+      'Landlord-Tenant Representation & Recovery of Possession',
+      'Real Estate Dispute Resolution',
     ],
     stats: [
       { value: '15M+', label: 'Sq Ft Leased' },
@@ -153,15 +153,16 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Entertainment Law',
     shortDescription: 'Representation for talent and production companies.',
     fullDescription:
-      'In an industry built on smoke and mirrors, you need someone who sees things clearly. We represent talent, producers, and studios, ensuring that creative rights are protected and financial participations are honored.',
+      "The entertainment and creative industry demands clarity, structure, and strong legal protection. At Grench Legal, we advise and represent artistes, creatives, producers, managers, and studios on the legal and commercial aspects of their work. We ensure that creative rights are secured, contracts are fair, and financial interests are properly protected.\n\nFrom structuring and negotiating agreements to resolving disputes, we provide practical, commercially focused counsel that safeguards our clients' careers and investments.We do not merely advise; we intervene to protect value and change outcomes.",
     image:
       'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=2000&auto=format&fit=crop',
     services: [
-      'Artist Management Contracts',
-      'Production Legal Services',
-      'Distribution Agreements',
-      'Royalty Disputes',
-      'Image Rights Protection',
+      'Artist, Talent & Creative Agreements',
+      'Artist Management & Recording Contracts',
+      'Production & Content Development Legal Services',
+      'Distribution, Licensing & Publishing Agreements',
+      'Royalty Structuring & Dispute Resolution',
+      'Image, Brand & Intellectual Property Rights Protection',
     ],
     stats: [
       { value: 'A-List', label: 'Client Roster' },
